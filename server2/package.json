@@ -1,0 +1,21 @@
+{
+  "name": "server-swt16",
+  "version": "1.0.0",
+  "description": "Web server for MVP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Néstor Escoto",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0",
+    "node-mongoose-validator": "^1.2.0"
+  }
+}
