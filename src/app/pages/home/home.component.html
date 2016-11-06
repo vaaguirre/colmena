@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 text-center" *ngFor="let cat of categories">
-            <a RouteLink="" class="btn btn-primary btn-lg">{{ cat.name }}</a>
+            <a (click)="onSelect(cat)" class="btn btn-primary btn-lg">{{ cat.name }}</a>
         </div>
     </div>
 </div>

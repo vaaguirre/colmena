@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesService } from '../../services/categories.service';
+import { Router } from '@angular/router';
+import { CategoriesService, Category } from '../../services/categories.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
-  categories: Array<any>;
+    categories: Array<any>;
 
-  constructor(private categoriesService: CategoriesService) { }
+    constructor(
+        private router: Router,
+        private categoriesService: CategoriesService) { }
 
-  ngOnInit() {
-      this.categories = this.categoriesService.getCategories();
-  }
-
+    ngOnInit() {
+        this.categoriesService.getCategories().then(categories => this.categories = categories);
+    }
+    onSelect(category: Category) {
+        this.router.navigate(['/categories', category.id]);
+    }
 }
