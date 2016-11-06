@@ -1,7 +1,17 @@
-<div *ngIf="category" class="container">
+<div class="container" *ngIf="category">
     <div class="row">
         <div class="col-md-12">
             <h2>{{ category.name }}</h2>
+        </div>
+    </div>
+    <div class="row" *ngIf="category.contractors">
+        <div class="col-md-12">
+            <div class="list-group">
+                <div class="list-group-item" *ngFor="let contractor of category.contractors">
+                    <h3>{{ contractor.name }}</h3>
+                    {{ contractor.contact }}
+                </div>
+            </div>
         </div>
     </div>
 </div>

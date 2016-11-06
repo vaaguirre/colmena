@@ -6,15 +6,30 @@ export class CategoriesService {
     categories: Array<Category> = [
         {
             "id": "189IYS",
-            "name": "Fontanero"
+            "name": "Fontaneros",
+            "contractors": [
+                {
+                    "_id": "581e9be7070bcd11a3cbb66a",
+                    "contact": "Call me at 22334455",
+                    "username": "elReyFulano",
+                    "name": "Fulano de Tal",
+                    "active": false,
+                    "categories": [
+                        "189IYS"
+                    ],
+                    "skills": []
+                }
+            ]
         },
         {
             "id": "109UYE",
-            "name": "Cerrajero"
+            "name": "Cerrajeros",
+            "contractors": []
         },
         {
             "id": "124KSJ",
-            "name": "Jardinero"
+            "name": "Jardineros",
+            "contractors": []
         },
     ];
 
@@ -36,4 +51,9 @@ export class CategoriesService {
 export class Category {
     id: string;
     name: string;
+    contractors: Array<Contractor>;
+}
+
+export class Contractor {
+
 }
