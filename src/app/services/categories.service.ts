@@ -10,14 +10,33 @@ export class CategoriesService {
             "contractors": [
                 {
                     "_id": "581e9be7070bcd11a3cbb66a",
-                    "contact": "Call me at 22334455",
+                    "contact": "22334455",
                     "username": "elReyFulano",
-                    "name": "Fulano de Tal",
+                    "name": "Fontanero Carlos Vasquez",
                     "active": false,
+                    "rating": 4,
                     "categories": [
                         "189IYS"
                     ],
-                    "skills": []
+                    "skills": [
+                        "Reparación de fugas y tuberías rotas",
+                        "Destape de cañerías",
+                    ]
+                },
+                {
+                    "_id": "581e9be7070bcd11a3cbb66a",
+                    "contact": "22334466",
+                    "username": "elReyFulano",
+                    "name": "Fontanero Juan Pérez",
+                    "active": false,
+                    "rating": 3,
+                    "categories": [
+                        "189IYS"
+                    ],
+                    "skills": [
+                        "Reparación de fugas y tuberías rotas",
+                        "Destape de cañerías",
+                    ]
                 }
             ]
         },

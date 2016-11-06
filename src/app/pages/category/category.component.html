@@ -8,8 +8,31 @@
         <div class="col-md-12">
             <div class="list-group">
                 <div class="list-group-item" *ngFor="let contractor of category.contractors">
-                    <h3>{{ contractor.name }}</h3>
-                    {{ contractor.contact }}
+                    <div class="row">
+                        <div class="col-md-5">
+                            <span style="font-size:48px;padding:10px;padding-top:15px;color:#999" class="pull-left"><i class="glyphicon glyphicon-user"></i></span>
+                            <h4>{{ contractor.name }}</h4>
+                            <rating [(ngModel)]="contractor.rating"
+                                    [max]="5"
+                                    [readonly]="true"
+                                    [disabled]="false"
+                                    [required]="true"
+                                    [float]="true"
+                                    [titles]="['Una', 'Dos', 'Tres', 'Cuatro', 'Cinco']">
+                            </rating> {{ contractor.rating }}/5 Estrellas
+                        </div>
+                        <div class="col-md-5">
+                            <b>Habilidades:</b><br>
+                            <ul>
+                                <li *ngFor="let skill of contractor.skills">{{ skill }}</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <div style="line-height:70px;">
+                                <a href="" class="btn btn-info">Contratar</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

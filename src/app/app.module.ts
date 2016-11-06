@@ -11,6 +11,7 @@ import { CategoriesService } from './services/categories.service';
 import { CategoryComponent } from './pages/category/category.component';
 import { AccountService } from './services/account.service';
 import { LoginComponent } from './pages/login/login.component';
+import { RatingModule } from 'ng2-rating';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    RatingModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'categories/:id', component: CategoryComponent },
