@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http, Headers, Response } from "@angular/http";
+import { environment } from "../../environments/environment";
 import "rxjs/add/operator/do";
 import "rxjs/add/operator/map";
 
@@ -13,7 +14,7 @@ export class AccountService {
         return new Observable(observable => {
             let headers = new Headers();
             headers.append("Content-Type", "application/json");
-            this.http.post('/login', JSON.stringify({
+            this.http.post(environment.apiurl + '/login', JSON.stringify({
                 username: username, password: password
             }), { headers: headers }).map(res => res.json())
                 .subscribe(res => {
