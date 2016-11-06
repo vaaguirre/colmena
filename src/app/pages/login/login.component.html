@@ -1,0 +1,13 @@
+<div *ngIf="!service.loggedIn" class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <h3>Inicio de Sesión</h3>
+
+            <form (ngSubmit)="login()" class="form">
+                <input type="text" [(ngModel)]="email" name="email" class="form-control" placeholder="Correo Electrónico"><br>
+                <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Contraseña"><br>
+                <button class="btn btn-primary" type="submit">Inicia sesión</button>
+            </form>
+        </div>
+    </div>
+</div>
